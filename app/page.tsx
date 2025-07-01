@@ -1,36 +1,27 @@
-"use client"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
+"use client";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import {
   ArrowRight,
+  BarChart3,
   Brain,
-  Target,
-  Zap,
-  CheckCircle,
   ChevronDown,
   Database,
   Globe,
-  Settings,
-  BarChart3,
-  TrendingUp,
-  Lightbulb,
-  Cpu,
-  Eye,
-  MessageSquare,
-  Users,
-  Shield,
-  Award,
-  Play,
-  Star,
   Menu,
-  X
-} from "lucide-react"
-import { useState } from "react"
+  Play,
+  Settings,
+  Star,
+  TrendingUp,
+  X,
+  Zap,
+} from "lucide-react";
+import { useState } from "react";
 
 export default function HomePage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
@@ -58,23 +49,45 @@ export default function HomePage() {
               <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
                 <Brain className="w-6 h-6 text-white" />
               </div>
-              <span className="text-2xl font-bold text-white tracking-tight">WISETECH STRATEGIES</span>
+              <span className="text-2xl font-bold text-white tracking-tight">
+                WISETECH STRATEGIES
+              </span>
             </div>
-            
+
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center space-x-8">
               <div className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors cursor-pointer group">
                 <span className="font-medium">Home</span>
                 <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform" />
               </div>
-              <a href="#about" className="text-gray-300 hover:text-white transition-colors font-medium">About Us</a>
-              <a href="#services" className="text-gray-300 hover:text-white transition-colors font-medium">Services</a>
-              <a href="#projects" className="text-gray-300 hover:text-white transition-colors font-medium">Projects</a>
+              <a
+                href="#about"
+                className="text-gray-300 hover:text-white transition-colors font-medium"
+              >
+                About Us
+              </a>
+              <a
+                href="#services"
+                className="text-gray-300 hover:text-white transition-colors font-medium"
+              >
+                Services
+              </a>
+              <a
+                href="#projects"
+                className="text-gray-300 hover:text-white transition-colors font-medium"
+              >
+                Projects
+              </a>
               <div className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors cursor-pointer group">
                 <span className="font-medium">More</span>
                 <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform" />
               </div>
-              <a href="#contact" className="text-gray-300 hover:text-white transition-colors font-medium">Contact</a>
+              <a
+                href="#contact"
+                className="text-gray-300 hover:text-white transition-colors font-medium"
+              >
+                Contact
+              </a>
             </div>
 
             {/* CTA Button */}
@@ -89,7 +102,11 @@ export default function HomePage() {
               className="lg:hidden text-white p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
 
@@ -97,10 +114,30 @@ export default function HomePage() {
           {isMenuOpen && (
             <div className="lg:hidden mt-4 pb-4 border-t border-gray-700">
               <div className="flex flex-col space-y-4 pt-4">
-                <a href="#about" className="text-gray-300 hover:text-white transition-colors font-medium">About Us</a>
-                <a href="#services" className="text-gray-300 hover:text-white transition-colors font-medium">Services</a>
-                <a href="#projects" className="text-gray-300 hover:text-white transition-colors font-medium">Projects</a>
-                <a href="#contact" className="text-gray-300 hover:text-white transition-colors font-medium">Contact</a>
+                <a
+                  href="#about"
+                  className="text-gray-300 hover:text-white transition-colors font-medium"
+                >
+                  About Us
+                </a>
+                <a
+                  href="#services"
+                  className="text-gray-300 hover:text-white transition-colors font-medium"
+                >
+                  Services
+                </a>
+                <a
+                  href="#projects"
+                  className="text-gray-300 hover:text-white transition-colors font-medium"
+                >
+                  Projects
+                </a>
+                <a
+                  href="#contact"
+                  className="text-gray-300 hover:text-white transition-colors font-medium"
+                >
+                  Contact
+                </a>
                 <Button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 py-2.5 rounded-xl font-medium w-full">
                   Get Started
                 </Button>
@@ -119,7 +156,7 @@ export default function HomePage() {
               AI-Powered Solutions
             </Badge>
           </div>
-          
+
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
             Transform Your Business
             <br />
@@ -128,12 +165,13 @@ export default function HomePage() {
               Power of AI
             </span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
-            In a world where strategic challenges are becoming more sophisticated, your business deserves the best
-            solutions. Our expert team leverages cutting-edge AI technology to drive real results.
+            In a world where strategic challenges are becoming more
+            sophisticated, your business deserves the best solutions. Our expert
+            team leverages cutting-edge AI technology to drive real results.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <Button
               size="lg"
@@ -153,20 +191,31 @@ export default function HomePage() {
 
           {/* Trust Indicators */}
           <div className="text-center">
-            <p className="text-gray-400 mb-8 text-lg">Trusted by industry leaders worldwide</p>
+            <p className="text-gray-400 mb-8 text-lg">
+              Trusted by industry leaders worldwide
+            </p>
             <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">
               {[
                 { name: "Writesonic", color: "bg-blue-500" },
                 { name: "LAVENDER", color: "bg-purple-600" },
                 { name: "Typewise", color: "bg-blue-500" },
                 { name: "10Web", color: "bg-gray-600" },
-                { name: "InnovateCorp", color: "bg-green-500" }
+                { name: "InnovateCorp", color: "bg-green-500" },
               ].map((company, index) => (
-                <div key={index} className="flex items-center space-x-3 hover:opacity-100 transition-opacity">
-                  <div className={`w-10 h-10 ${company.color} rounded-xl flex items-center justify-center shadow-lg`}>
-                    <span className="text-white text-sm font-bold">{company.name.charAt(0)}</span>
+                <div
+                  key={index}
+                  className="flex items-center space-x-3 hover:opacity-100 transition-opacity"
+                >
+                  <div
+                    className={`w-10 h-10 ${company.color} rounded-xl flex items-center justify-center shadow-lg`}
+                  >
+                    <span className="text-white text-sm font-bold">
+                      {company.name.charAt(0)}
+                    </span>
                   </div>
-                  <span className="text-gray-400 font-medium">{company.name}</span>
+                  <span className="text-gray-400 font-medium">
+                    {company.name}
+                  </span>
                 </div>
               ))}
             </div>
@@ -182,8 +231,9 @@ export default function HomePage() {
               About Our Excellence
             </Badge>
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 max-w-5xl mx-auto leading-tight">
-              Our team of data scientists, engineers, and designers work at the intersection of technology and strategy,
-              turning complex challenges into{" "}
+              Our team of data scientists, engineers, and designers work at the
+              intersection of technology and strategy, turning complex
+              challenges into{" "}
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 simple AI solutions
               </span>
@@ -197,47 +247,59 @@ export default function HomePage() {
                 title: "Seamless Integration",
                 value: "298+",
                 description: "API Integrations",
-                color: "blue"
+                color: "blue",
               },
               {
                 icon: BarChart3,
                 title: "AI Projects Delivered",
                 value: "978+",
                 description: "Successfully Completed",
-                color: "purple"
+                color: "purple",
               },
               {
                 icon: TrendingUp,
                 title: "Performance Boost",
                 value: "300%",
                 description: "Average Improvement",
-                color: "green"
+                color: "green",
               },
               {
                 icon: Zap,
                 title: "Faster Deployment",
                 value: "95%",
                 description: "Time Reduction",
-                color: "yellow"
-              }
+                color: "yellow",
+              },
             ].map((stat, index) => (
-              <Card key={index} className="bg-gray-800/60 border-gray-700/50 p-8 hover:bg-gray-800/80 transition-all duration-300 group">
+              <Card
+                key={index}
+                className="bg-gray-800/60 border-gray-700/50 p-8 hover:bg-gray-800/80 transition-all duration-300 group"
+              >
                 <CardContent className="p-0">
                   <div className="flex items-center space-x-3 mb-6">
-                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                      stat.color === 'blue' ? 'bg-blue-500/20 text-blue-400' :
-                      stat.color === 'purple' ? 'bg-purple-500/20 text-purple-400' :
-                      stat.color === 'green' ? 'bg-green-500/20 text-green-400' :
-                      'bg-yellow-500/20 text-yellow-400'
-                    }`}>
+                    <div
+                      className={`w-12 h-12 rounded-xl flex items-center justify-center ${
+                        stat.color === "blue"
+                          ? "bg-blue-500/20 text-blue-400"
+                          : stat.color === "purple"
+                          ? "bg-purple-500/20 text-purple-400"
+                          : stat.color === "green"
+                          ? "bg-green-500/20 text-green-400"
+                          : "bg-yellow-500/20 text-yellow-400"
+                      }`}
+                    >
                       <stat.icon className="w-6 h-6" />
                     </div>
-                    <span className="text-white font-semibold text-lg">{stat.title}</span>
+                    <span className="text-white font-semibold text-lg">
+                      {stat.title}
+                    </span>
                   </div>
                   <div className="text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">
                     {stat.value}
                   </div>
-                  <p className="text-gray-400 font-medium">{stat.description}</p>
+                  <p className="text-gray-400 font-medium">
+                    {stat.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -264,36 +326,50 @@ export default function HomePage() {
             {[
               {
                 title: "AI Strategy & Consulting",
-                description: "We assess your business, identify high-impact AI opportunities, and guide you with a clear roadmap for implementation and growth.",
+                description:
+                  "We assess your business, identify high-impact AI opportunities, and guide you with a clear roadmap for implementation and growth.",
                 icon: Brain,
                 gradient: "from-blue-500/10 to-purple-500/10",
-                iconBg: "bg-blue-500/20 text-blue-400"
+                iconBg: "bg-blue-500/20 text-blue-400",
               },
               {
                 title: "AI Integration & Deployment",
-                description: "Seamlessly integrate AI solutions into your existing systems with minimal disruption and maximum efficiency.",
+                description:
+                  "Seamlessly integrate AI solutions into your existing systems with minimal disruption and maximum efficiency.",
                 icon: Database,
                 gradient: "from-purple-500/10 to-blue-500/10",
-                iconBg: "bg-purple-500/20 text-purple-400"
+                iconBg: "bg-purple-500/20 text-purple-400",
               },
               {
                 title: "Custom AI Solutions",
-                description: "Tailored AI applications built specifically for your business needs, from chatbots to predictive analytics.",
+                description:
+                  "Tailored AI applications built specifically for your business needs, from chatbots to predictive analytics.",
                 icon: Globe,
                 gradient: "from-blue-500/10 to-green-500/10",
-                iconBg: "bg-blue-500/20 text-blue-400"
-              }
+                iconBg: "bg-blue-500/20 text-blue-400",
+              },
             ].map((service, index) => (
-              <Card key={index} className="bg-gray-800/60 border-gray-700/50 p-8 group hover:bg-gray-800/80 transition-all duration-300 hover:scale-105">
+              <Card
+                key={index}
+                className="bg-gray-800/60 border-gray-700/50 p-8 group hover:bg-gray-800/80 transition-all duration-300 hover:scale-105"
+              >
                 <CardContent className="p-0">
                   <div className="mb-6">
-                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center ${service.iconBg} mb-4`}>
+                    <div
+                      className={`w-16 h-16 rounded-2xl flex items-center justify-center ${service.iconBg} mb-4`}
+                    >
                       <service.icon className="w-8 h-8" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                    <p className="text-gray-300 leading-relaxed mb-6">{service.description}</p>
+                    <h3 className="text-2xl font-bold text-white mb-4">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed mb-6">
+                      {service.description}
+                    </p>
                   </div>
-                  <div className={`relative h-32 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center overflow-hidden`}>
+                  <div
+                    className={`relative h-32 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center overflow-hidden`}
+                  >
                     <div className="absolute inset-4 border border-white/10 rounded-lg"></div>
                     <div className="text-white/20 text-6xl font-bold">AI</div>
                   </div>
@@ -309,9 +385,12 @@ export default function HomePage() {
               "Design Automation",
               "Predictive Analytics",
               "Computer Vision",
-              "Machine Learning"
+              "Machine Learning",
             ].map((tag, index) => (
-              <Badge key={index} className="bg-blue-500/20 text-blue-300 border-blue-500/30 px-4 py-2 text-sm">
+              <Badge
+                key={index}
+                className="bg-blue-500/20 text-blue-300 border-blue-500/30 px-4 py-2 text-sm"
+              >
                 <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
                 {tag}
               </Badge>
@@ -321,7 +400,10 @@ export default function HomePage() {
       </section>
 
       {/* Enhanced Projects Section */}
-      <section id="projects" className="relative z-10 py-20 px-6 bg-gray-800/30">
+      <section
+        id="projects"
+        className="relative z-10 py-20 px-6 bg-gray-800/30"
+      >
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <Badge className="bg-green-500/20 text-green-300 border-green-500/30 px-4 py-2 rounded-full mb-8">
@@ -341,28 +423,38 @@ export default function HomePage() {
                 title: "Intelligent Automation For Scalable Business Processes",
                 category: "AI Consulting",
                 gradient: "from-red-500/30 to-purple-500/30",
-                categoryColor: "bg-blue-500/20 text-blue-300 border-blue-500/30"
+                categoryColor:
+                  "bg-blue-500/20 text-blue-300 border-blue-500/30",
               },
               {
                 title: "Smart Vision System For Quality Control",
                 category: "Computer Vision",
                 gradient: "from-cyan-500/30 to-blue-500/30",
-                categoryColor: "bg-purple-500/20 text-purple-300 border-purple-500/30"
+                categoryColor:
+                  "bg-purple-500/20 text-purple-300 border-purple-500/30",
               },
               {
                 title: "Predictive Analytics For Retail Growth",
                 category: "Machine Learning",
                 gradient: "from-orange-500/30 to-red-500/30",
-                categoryColor: "bg-green-500/20 text-green-300 border-green-500/30"
-              }
+                categoryColor:
+                  "bg-green-500/20 text-green-300 border-green-500/30",
+              },
             ].map((project, index) => (
-              <Card key={index} className="bg-gray-800/60 border-gray-700/50 p-8 group hover:bg-gray-800/80 transition-all duration-300 hover:scale-105">
+              <Card
+                key={index}
+                className="bg-gray-800/60 border-gray-700/50 p-8 group hover:bg-gray-800/80 transition-all duration-300 hover:scale-105"
+              >
                 <CardContent className="p-0">
-                  <div className={`h-40 bg-gradient-to-br ${project.gradient} rounded-xl mb-6 flex items-center justify-center relative overflow-hidden`}>
+                  <div
+                    className={`h-40 bg-gradient-to-br ${project.gradient} rounded-xl mb-6 flex items-center justify-center relative overflow-hidden`}
+                  >
                     <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
                     <div className="text-white/30 text-4xl font-bold">AI</div>
                   </div>
-                  <h3 className="text-white font-bold text-xl mb-4 leading-tight">{project.title}</h3>
+                  <h3 className="text-white font-bold text-xl mb-4 leading-tight">
+                    {project.title}
+                  </h3>
                   <Badge className={`${project.categoryColor} text-sm`}>
                     <div className="w-2 h-2 bg-current rounded-full mr-2"></div>
                     {project.category}
@@ -389,7 +481,9 @@ export default function HomePage() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-                Ready to innovate with AI? Whether you have an idea, a challenge, or a full roadmap, we'd love to help bring it to life.
+                Ready to innovate with AI? Whether you have an idea, a
+                challenge, or a full roadmap, we&apos;d love to help bring it to
+                life.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Button
@@ -426,17 +520,26 @@ export default function HomePage() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-                Crafting intuitive, user-first interfaces powered by AI for smarter, faster, and more personalized digital experiences.
+                Crafting intuitive, user-first interfaces powered by AI for
+                smarter, faster, and more personalized digital experiences.
               </p>
 
               <div className="grid grid-cols-2 gap-8">
                 <div className="text-center">
-                  <div className="text-5xl font-bold text-blue-400 mb-4">500+</div>
-                  <p className="text-gray-400 font-medium">Projects Delivered</p>
+                  <div className="text-5xl font-bold text-blue-400 mb-4">
+                    500+
+                  </div>
+                  <p className="text-gray-400 font-medium">
+                    Projects Delivered
+                  </p>
                 </div>
                 <div className="text-center">
-                  <div className="text-5xl font-bold text-purple-400 mb-4">98%</div>
-                  <p className="text-gray-400 font-medium">Client Satisfaction</p>
+                  <div className="text-5xl font-bold text-purple-400 mb-4">
+                    98%
+                  </div>
+                  <p className="text-gray-400 font-medium">
+                    Client Satisfaction
+                  </p>
                 </div>
               </div>
             </div>
@@ -448,18 +551,26 @@ export default function HomePage() {
                     <span className="text-white font-bold text-lg">LM</span>
                   </div>
                   <div>
-                    <h4 className="text-white font-bold text-lg">Lauren Martinez</h4>
+                    <h4 className="text-white font-bold text-lg">
+                      Lauren Martinez
+                    </h4>
                     <p className="text-gray-400">CTO, TechInnovate Corp</p>
                   </div>
                 </div>
                 <div className="mb-6">
                   <div className="flex space-x-1 mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      <Star
+                        key={i}
+                        className="w-5 h-5 text-yellow-400 fill-current"
+                      />
                     ))}
                   </div>
                   <p className="text-gray-300 text-lg leading-relaxed">
-                    "Working with WiseTech Strategies was transformative. Their AI solutions helped us reduce processing time by 60% and increased customer satisfaction dramatically. The team's expertise is unmatched."
+                    &quot;Working with WiseTech Strategies was transformative. Their
+                    AI solutions helped us reduce processing time by 60% and
+                    increased customer satisfaction dramatically. The team&apos;s
+                    expertise is unmatched.&quot;
                   </p>
                 </div>
                 <div className="flex space-x-2">
@@ -478,16 +589,17 @@ export default function HomePage() {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Let's start working{" "}
+              Let&apos;s start working{" "}
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 together!
               </span>
             </h2>
             <p className="text-xl text-gray-300 mb-10">
-              Partner with us to create intelligent, impactful, and future-ready AI solutions.
+              Partner with us to create intelligent, impactful, and future-ready
+              AI solutions.
             </p>
             <Button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-10 py-4 rounded-xl font-semibold shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105">
-              Let's Work Together
+              Let&apos;s Work Together
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </div>
@@ -501,12 +613,15 @@ export default function HomePage() {
                 <span className="text-xl font-bold text-white">WISETECH</span>
               </div>
               <p className="text-gray-400 leading-relaxed">
-                Transforming businesses with cutting-edge AI solutions and strategic innovation.
+                Transforming businesses with cutting-edge AI solutions and
+                strategic innovation.
               </p>
             </div>
 
             <div>
-              <h4 className="text-white font-bold text-lg mb-6">Get In Touch</h4>
+              <h4 className="text-white font-bold text-lg mb-6">
+                Get In Touch
+              </h4>
               <div className="space-y-4 text-gray-400">
                 <p className="flex items-center space-x-2">
                   <span>📞</span>
@@ -520,7 +635,9 @@ export default function HomePage() {
             </div>
 
             <div>
-              <h4 className="text-white font-bold text-lg mb-6">Our Location</h4>
+              <h4 className="text-white font-bold text-lg mb-6">
+                Our Location
+              </h4>
               <div className="space-y-2 text-gray-400">
                 <p>123 Innovation Drive</p>
                 <p>Tech Hub, Silicon Valley</p>
@@ -529,7 +646,9 @@ export default function HomePage() {
             </div>
 
             <div>
-              <h4 className="text-white font-bold text-lg mb-6">Stay Updated</h4>
+              <h4 className="text-white font-bold text-lg mb-6">
+                Stay Updated
+              </h4>
               <div className="flex space-x-2">
                 <Input
                   placeholder="Enter your email"
@@ -544,11 +663,12 @@ export default function HomePage() {
 
           <div className="border-t border-gray-700 pt-8 text-center">
             <p className="text-gray-400">
-              © 2024 WiseTech Strategies. All rights reserved. Built with ❤️ for the future of AI.
+              © 2024 WiseTech Strategies. All rights reserved. Built with ❤️ for
+              the future of AI.
             </p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
