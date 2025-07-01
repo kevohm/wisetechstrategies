@@ -57,7 +57,7 @@ export default function Home() {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             STRATEGY IS
             <span className="block bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-              EVERYONE'S BUSINESS
+              EVERYONE&apos;S BUSINESS
             </span>
           </h1>
           <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -232,7 +232,7 @@ export default function Home() {
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Strategy?</h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            Let our AI-powered solutions and expert guidance drive your organization's strategic success.
+            Let our AI-powered solutions and expert guidance drive your organization&apos;s strategic success.
           </p>
           <Button
             size="lg"
@@ -249,7 +249,7 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Get In Touch</h2>
-            <p className="text-slate-300">Ready to revolutionize your strategic approach? Let's connect.</p>
+            <p className="text-slate-300">Ready to revolutionize your strategic approach? Let&apos;s connect.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
